@@ -4,15 +4,15 @@ class PosConfig(models.Model):
     _inherit = 'pos.config'
 
     enable_pending_order_limit = fields.Boolean(
-        string="Activer la limitation des commandes",
+        string="Enable Order Limitation",
         default=False,
-        help="Active la vérification du nombre de commandes en attente dans le POS."
+        help="Enable checking the number of pending orders in POS."
     )
 
     pending_orders_limit = fields.Integer(
-        string="Limite de commandes en attente",
+        string="Pending Orders Limit",
         default=3,
-        help="Nombre maximum de commandes en attente autorisées."
+        help="Maximum number of pending orders allowed."
     )
 
     @api.model

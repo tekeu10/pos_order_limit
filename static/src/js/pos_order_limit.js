@@ -16,8 +16,8 @@ odoo.define('pos_order_limit.TicketScreenLimit', function (require) {
 
                 if (pendingLimit > 0 && pendingOrders.length >= pendingLimit) {
                     await this.showPopup('ErrorPopup', {
-                        title: 'Limite atteinte',
-                        body: `Impossible de créer une nouvelle commande : vous avez atteint la limite de ${pendingLimit} commandes en attente. Veuillez Supprimer ou procéder au paiement des commandes anterieures`,
+                        title: 'Limit Reached',
+                        body: `Cannot create a new order: you have reached the limit of ${pendingLimit} pending orders. Please delete or proceed with payment of previous orders.`,
                     });
                     return;
                 }

@@ -1,5 +1,5 @@
 # copyright 2025 Loïc TEKEU (Alt Plus)
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License OPL-1 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
     'name': 'POS Order Limit',
@@ -13,7 +13,9 @@ It helps avoid overload and ensures better cashier workflow management.
     'author': 'Loïc TEKEU (Alt Plus)',
     'website': 'https://github.com/tekeu10',
     'support': 'https://www.linkedin.com/in/lo%C3%AFc-cabrel-tekeu-1b7b9125b',
-    'license': 'AGPL-3',
+    'license': 'OPL-1',
+    'price': 34.99,
+    'currency': 'EUR',
     'depends': ['point_of_sale'],
     'data': [
         'views/pos_config_views.xml',
