@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>POS Order Limit</title>
+  <style type="text/css">
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    h1.title { text-align: center; }
+    .section { margin-bottom: 40px; }
+    img.align-center { display: block; margin: 20px auto; max-width: 600px; }
+    img.align-center {
+        display: block;
+        margin: 20px auto;
+        width: 600px;
+        height: 400px;
+        object-fit: contain;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+ </style>
+</head>
+<body>
+  <div class="document" id="pos-order-limit">
+    <h1 class="title">POS Order Limit</h1>
+
+    <p>
+      <a href="https://img.shields.io/badge/maturity-Stable-brightgreen.png">
+        <img src="https://img.shields.io/badge/maturity-Stable-brightgreen.png" alt="Stable" />
+      </a>
+      <a href="http://www.gnu.org/licenses/agpl-3.0-standalone.html">
+        <img src="https://img.shields.io/badge/license-AGPL--3-blue.png" alt="License: AGPL-3" />
+      </a>
+      <a href="https://github.com/tekeu10">
+        <img src="https://img.shields.io/badge/github-tekeu10-lightgray.png?logo=github" alt="GitHub" />
+      </a>
+      <a href="https://www.linkedin.com/in/lo%C3%AFc-cabrel-tekeu-1b7b9125b">
+        <img src="https://img.shields.io/badge/linkedin-Loïc%20Cabrel%20Tekeu-blue.png?logo=linkedin" alt="LinkedIn" />
+      </a>
+    </p>
+
+    <div class="section">
+      <h2>🧩 Overview</h2>
+      <p>This module limits the number of pending orders in the Point of Sale. When the configured threshold is reached, new orders are blocked until existing ones are processed. It helps prevent overload and ensures smoother cashier operations.</p>
+    </div>
+
+    <div class="section">
+      <h2>⚙️ Configuration</h2>
+      <ul>
+        <li>Go to POS Configuration</li>
+        <img src="config1.png" alt="POS Order Limit Example" class="align-center" />
+        <li>Set the maximum number of pending orders allowed</li>
+        <img src="config2.png" alt="POS Order Limit Example" class="align-center" />
+        <li>Enable the blocking feature if needed</li>
+        <img src="config3.png" alt="POS Order Limit Example" class="align-center" />
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🧪 How to Test</h2>
+      <ol>
+        <li>Open the POS interface</li>
+        <li>Create multiple orders and leave them pending</li>
+        <img src="new order.png" alt="POS Order Limit Example" class="align-center" />
+        <li>Observe the blocking behavior once the limit is reached</li>
+        <img src="new message.png" alt="POS Order Limit Example" class="align-center" />
+        <li>Process or delete pending orders to resume normal flow</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <h2>📦 Dependencies</h2>
+      <ul>
+        <li><code>point_of_sale</code></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📜 License</h2>
+      <p>AGPL-3</p>
+    </div>
+  </div>
+</body>
+</html>

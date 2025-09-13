@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_pos_order_limit" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.pos.order.limit</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="20"/>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='pos_interface_section']" position="after">
+                <div class="col-12 col-lg-6 o_setting_box" id="pos_order_management_section">
+                    <div class="o_setting_left_pane">
+                        <label for="pos_block_pending_orders" string="Bloquer les commandes en attente"/>
+                        <field name="pos_block_pending_orders"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label string="Gestion des Commandes" for="pos_block_pending_orders"/>
+                        <div class="text-muted">
+                             Bloquer les nouvelles commandes quand la limite est atteinte
+                        </div>
+                        <!--
+                            The following div is only visible when 'pos_block_pending_orders' is True.
+                            This ensures the maximum pending orders field is shown only if blocking is enabled.
+                        -->
+                        <div class="content-group mt16" attrs="{'invisible': [('pos_block_pending_orders', '=', False)]}">
+                            <div class="mt16">
+                                <field name="pos_max_pending_orders" class="o_light_label"/>
+                                <label for="pos_max_pending_orders" string="commandes maximum"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
